@@ -1,0 +1,8 @@
+- Input is assumed nonempty, with unique finite timestamps and valid 0/1 brake states.
+- Raw timestamps are sorted before resampling.
+- Speed is interpolated linearly over time; leading/trailing missing speeds remain NaN.
+- Brake state is forward-filled onto the 10 Hz grid.
+- Events start at the first pressed sample and end at the first following released sample.
+- Events active at recording boundaries use only the observed interval.
+- Speed drops use unrounded endpoint speeds; only printed results are rounded.
+- With more time, I would add explicit input validation and a maximum interpolation-gap policy.
