@@ -20,7 +20,7 @@ On Windows, activate with `.venv\Scripts\activate` instead.
 python solution.py
 ```
 
-The script reads `drive.csv`, prints the resampled data, and reports these events:
+The script reads `drive.csv`, resamples the signals, and reports these events:
 
 | start_s | end_s | duration_s | speed_drop_kmh |
 | ---: | ---: | ---: | ---: |

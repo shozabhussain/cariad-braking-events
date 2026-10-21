@@ -68,6 +68,5 @@ def find_braking_events(df: pd.DataFrame, min_duration_s: float = 0.5) -> pd.Dat
 if __name__ == "__main__":
     raw = pd.read_csv("drive.csv")
     signals = resample_signals(raw)
-    print(signals)
     events = find_braking_events(signals)
     print(events.round({"speed_drop_kmh": 2}))
